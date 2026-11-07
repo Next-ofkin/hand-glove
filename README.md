@@ -1,6 +1,6 @@
 # Hand Glove
 
-A DIY wireless right-hand sensing glove for [Hand Graph](https://github.com/Next-ofkin/hand-graph).
+A DIY pair of wireless sensing gloves, **one left and one right**, for [Hand Graph](https://github.com/Next-ofkin/hand-graph). Both hands working together are the required finished scope.
 
 **Current plan: 7 November 2026, Africa/Lagos.** The owner will source parts, assemble the glove, load software, calibrate it and run the tests. A local electronics engineer or technician will help with soldering and checking those connections when needed.
 
@@ -8,19 +8,22 @@ A DIY wireless right-hand sensing glove for [Hand Graph](https://github.com/Next
 
 ## Intended result
 
-- A fitted, breathable glove with a removable rechargeable wrist pod.
-- Finger-joint sensing, hand rotation and physical thumb-to-index / thumb-to-middle click contacts.
-- A dedicated wireless USB receiver connected to the computer.
-- A live virtual hand and pointer/click input in Hand Graph.
-- USB-C charging in the finished pod; development-board packaging comes first.
+- Two fitted, breathable gloves, each with its own removable rechargeable wrist pod.
+- Finger-joint sensing, hand rotation and physical thumb-to-index / thumb-to-middle contacts on each hand.
+- Two controllers and two orientation sensors, with a shared wireless USB receiver as the development target.
+- Two separately calibrated virtual hands in Hand Graph, with hand-specific input and explicit pointer/click ownership.
+- USB-C charging in each finished pod; development-board packaging comes first.
 
 The current proposal uses nRF52840 hardware and joint-specific sensor samples. The earlier ESP32/BLE and five whole-finger sensor outline is retained in the [original plan](docs/archive/2026-11-07-original-plan.md) as history.
+
+The previous right-hand-only documentation was a scope error. The project requires both hands. A shared receiver serving both gloves needs custom firmware and simultaneous-use testing; it is not an existing tested feature.
 
 ## Start here
 
 | Document | Purpose |
 | --- | --- |
 | [Current plan](docs/PLAN.md) | Decisions, responsibilities, milestones and open engineering work |
+| [Both-hand measurements](docs/MEASUREMENTS.md) | Separate left/right fit and sensor-zone measurements |
 | [Parts and sourcing](docs/BOM.md) | Small first purchases, Nigerian suppliers and import candidates |
 | [DIY build sequence](docs/BUILD.md) | What to do and verify at each stage |
 | [Local soldering brief](docs/LOCAL-SOLDERING.md) | A limited task sheet to take to a local technician |
@@ -29,6 +32,6 @@ The current proposal uses nRF52840 hardware and joint-specific sensor samples. T
 
 ## Next milestone
 
-Prove an index-finger and thumb sample that gives separate repeatable readings, detects contact clicks and sends real data through the proposed wireless receiver into a Hand Graph test view. Prove each connection over USB on the bench before adding wireless.
+Start by measuring **both hands separately**. Then prove an index-finger and thumb sample for each hand, with separate repeatable readings and contact events. Prove each circuit over USB on the bench, then prove both samples sending data together through the proposed shared receiver into a Hand Graph test view.
 
-Buy the remaining full-glove sensors and commission compact packaging after this sample passes. A single IMU supplies rotation; reliable absolute hand position in a room requires separate tracking.
+Buy the remaining sensors and commission compact packaging for the pair after both samples pass the simultaneous-use gate. One glove may be checked at a time on the bench; the completion milestone is two full gloves working together. Each IMU supplies its hand's rotation; reliable absolute position in a room requires separate tracking.

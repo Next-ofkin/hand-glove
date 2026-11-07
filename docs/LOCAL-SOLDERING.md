@@ -3,6 +3,8 @@
 Updated: **7 November 2026 (Africa/Lagos)**  
 Project: **Hand Glove DIY prototype**
 
+Scope of the finished project: **two gloves, LEFT and RIGHT**. This task sheet can cover one bench circuit or both; label exactly which hand each job belongs to.
+
 ## Scope
 
 The owner is building and testing the glove. This job covers only agreed soldering, connector work, inspection and basic electrical checks. Quote each small job separately so the build can proceed in stages.
@@ -10,7 +12,7 @@ The owner is building and testing the glove. This job covers only agreed solderi
 ## Bring to the technician
 
 - The exact boards, leads and connectors for this stage.
-- A reviewed schematic, board-specific pin table and labelled connector diagram.
+- A reviewed schematic, board-specific pin table and labelled LEFT/RIGHT connector diagrams.
 - The required wire lengths and strain-relief arrangement.
 - Any sensor supplier termination/mounting instructions.
 
@@ -30,6 +32,7 @@ Do not directly heat a flexible sensor termination unless the supplier permits t
 ## Handover checks
 
 - [ ] Parts and board revisions match the supplied drawing.
+- [ ] LEFT and RIGHT boards, connectors and harnesses are labelled; no unintended electrical connection joins the two gloves.
 - [ ] Joints inspected; no solder bridges, exposed loose strands or lifted pads.
 - [ ] Signal-to-connector continuity checked against the pin table.
 - [ ] Power/ground wiring and battery connector polarity checked.
@@ -38,13 +41,14 @@ Do not directly heat a flexible sensor termination unless the supplier permits t
 - [ ] Any powered checks use the agreed supply procedure; abnormal current or heat investigated.
 - [ ] Owner receives the as-built wiring notes and all unused parts.
 
-The owner will perform firmware loading, calibration, wireless tests and application testing. Continuity alone does not establish that the firmware, sensor circuit or complete glove works.
+The owner will load firmware, configure hand identities, calibrate each glove and test both together. Continuity alone does not establish that the firmware, sensor circuit or complete pair works.
 
 ## Job record
 
 | Field | Record |
 | --- | --- |
 | Job date | Pending |
+| Hand / board identity (LEFT, RIGHT or both) | Pending |
 | Drawing revision / repository commit | Pending |
 | Agreed joints and connectors | Pending |
 | Quoted labour | Pending |
